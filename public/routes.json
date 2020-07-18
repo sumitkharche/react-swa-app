@@ -1,10 +1,6 @@
 {
     "routes": [
       {
-        "route": "/dashboard",
-        "allowedRoles": ["authenticated"]
-      },
-      {
         "route": "/*",
         "serve": "/index.html",
         "statusCode": 200
@@ -16,5 +12,8 @@
         "statusCode": "302",
         "serve": "/unauthenticated.html"
       }
-    ]
+    ],
+    "mimeTypes": {
+      "custom": "text/html"
+   }
   }
