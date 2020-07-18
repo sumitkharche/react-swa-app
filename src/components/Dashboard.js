@@ -25,8 +25,8 @@ const Dashboard = () => {
     }
 
     function goAuth() {
-        const { pathname } = '/'
-        const redirect = `post_logout_redirect_uri=${pathname}`;
+        //const { pathname } = '/';
+        const redirect = `post_logout_redirect_uri=/`;
         const url = `/.auth/logout?${redirect}`;
         window.location.href = url;
       }
