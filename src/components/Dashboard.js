@@ -4,7 +4,6 @@ import { Card, Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
-  const history = useHistory();
     const [userInfo, setUserInfo] = useState();
 
     useEffect(() => {
