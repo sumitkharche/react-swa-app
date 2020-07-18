@@ -1,6 +1,11 @@
 {
     "routes": [
       {
+        "route": "/dashboard",
+        "allowedRoles": ["authenticated"],
+        "serve": "/dashboard"
+      },
+      {
         "route": "/*",
         "serve": "/index.html",
         "statusCode": 200
