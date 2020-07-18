@@ -16,5 +16,8 @@
         "statusCode": "302",
         "serve": "/unauthenticated.html"
       }
-    ]
+    ],
+    "mimeTypes": {
+      "custom": "text/html"
+   }
   }
