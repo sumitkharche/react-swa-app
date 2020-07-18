@@ -1,9 +1,10 @@
 import React, {useState,useEffect} from 'react'
 import Header from './Header'
 import { Card, Button } from 'react-bootstrap'
+import { Link, useHistory } from "react-router-dom";
 
 const Dashboard = () => {
-
+  const history = useHistory();
     const [userInfo, setUserInfo] = useState();
 
     useEffect(() => {
@@ -17,6 +18,9 @@ const Dashboard = () => {
         const response = await fetch('/.auth/me');
         const payload = await response.json();
         const { clientPrincipal } = payload;
+        if(clientPrincipal == null){
+          history.push("/unauthenticated.html");
+        }
         return clientPrincipal;
       } catch (error) {
         console.error('No profile could be found');
