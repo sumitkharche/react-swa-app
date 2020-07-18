@@ -2,8 +2,7 @@
     "routes": [
       {
         "route": "/dashboard",
-        "allowedRoles": ["authenticated"],
-        "serve": "/dashboard"
+        "allowedRoles": ["authenticated"]
       },
       {
         "route": "/*",
