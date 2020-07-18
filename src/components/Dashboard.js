@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import Header from './Header'
 import { Card, Button } from 'react-bootstrap'
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const history = useHistory();
@@ -18,9 +18,6 @@ const Dashboard = () => {
         const response = await fetch('/.auth/me');
         const payload = await response.json();
         const { clientPrincipal } = payload;
-        if(clientPrincipal == null){
-          history.push("/unauthenticated.html");
-        }
         return clientPrincipal;
       } catch (error) {
         console.error('No profile could be found');
@@ -39,6 +36,7 @@ const Dashboard = () => {
     return (
         <React.Fragment>
             <Header />
+            {userInfo && (
             <Card style={{ width: '30rem', marginLeft:'400px',marginTop:'50px' }}>
                 <Card.Body>
                     <Card.Title>Welcome {userInfo && userInfo.userDetails}</Card.Title>
@@ -47,6 +45,10 @@ const Dashboard = () => {
                     )}
                 </Card.Body>
             </Card>
+            )}
+            {!userInfo && (
+              <Link to="/">Please LogIn to access Dashboard</Link>
+            )}
         </React.Fragment>
     )
 }
