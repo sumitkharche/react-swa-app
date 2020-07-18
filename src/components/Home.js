@@ -9,7 +9,7 @@ const Home = () => {
             <Row>
                 <Col>
                     <Jumbotron>
-                        <h1 className="header">Welcome to React Static Web App </h1>
+                        <h1 className="header">React & Azure Static Web App </h1>
                         <Login />
                     </Jumbotron>
                 </Col>

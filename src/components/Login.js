@@ -10,10 +10,8 @@ const Login = () => {
       }
 
     return (
-        <Card style={{ width: '30rem' }}>
-            <Card.Header as="h3">Log In</Card.Header>
-            <Card.Body>
-                <div style={{ paddingBottom: '30px' }}>
+        <div style={{ textAlign: 'center' }}>
+            <div style={{ paddingBottom: '30px' }}>
                     <Button variant="outline-danger" onClick={()=> goAuth('google')}>
                         <img style={{ paddingRight: '10px' }} src="https://secure.meetupstatic.com/s/img/09976452261947836380738/logo_google.svg" alt="Continue with Google" />
                         Log In with Google
@@ -27,8 +25,7 @@ const Login = () => {
                          Log In with Github
                         </Button>
                 </div> */}
-            </Card.Body>
-        </Card>
+        </div>
     )
 }
 
